@@ -10,7 +10,11 @@
 
 3. Calcolare la media dei voti di ogni appello d'esame
 
+   - SELECT `exam_student`.`exam_id` AS `esame_numero`, SUM(`exam_student`.`vote`) / COUNT(`exam_student`.`vote`) AS `media_voti` FROM `exam_student` GROUP BY `exam_student`.`exam_id`;
+
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+   - SELECT COUNT(`degrees`.`id`) AS `corsi_per_dipartimento` FROM `degrees` GROUP BY `degrees`.`department_id`;
 
 # JOIN
 
